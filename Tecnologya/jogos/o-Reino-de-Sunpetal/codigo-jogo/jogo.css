@@ -1,0 +1,98 @@
+/* ===============================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282828;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===============================
+   CONTAINER DO JOGO
+   =============================== */
+.game-container {
+  width: 800px;
+  height: 600px;
+  background-image: url("../design-jogo/fundo-cidade.gif");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #000;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* ===============================
+   CONTAINER NOVA FASE (CHEFÃO)
+   =============================== */
+.game-container.nova-fase {
+  background-color: transparent;
+  background-image: url("../design-jogo/fundodanovafase750 (2).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  width: 800px;
+  height: 600px;
+}
+
+/* ===============================
+   PLAYER
+   =============================== */
+#player {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  transform: scale(2);
+  transform-origin: bottom left;
+  image-rendering: pixelated;
+}
+
+/* ===============================
+   INIMIGOS COMUNS E CHEFÃO
+   =============================== */
+#enemy, #enemy1, #enemy2, #enemy3, #ogroChefa {
+  position: absolute;
+  bottom: 50px;
+  transform: scale(2.2);
+  transform-origin: bottom center;
+  image-rendering: pixelated;
+  transition: transform 0.08s linear;
+}
+
+/* ===============================
+   ITENS DROPADOS (GEMAS)
+   =============================== */
+.gem-drop {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  image-rendering: pixelated;
+  z-index: 50; /* Garante que a gema apareça sobre o fundo */
+  transition: transform 0.1s ease;
+}
+
+/* Animação de brilho para as esmeraldas */
+@keyframes gemGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #00ff00) brightness(1);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #00ff00) brightness(1.2);
+  }
+}
+
+/* Efeito hover para as esmeraldas */
+.gem-drop:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
