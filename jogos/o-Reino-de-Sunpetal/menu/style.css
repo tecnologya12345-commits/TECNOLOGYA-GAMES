@@ -1,0 +1,86 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-image: url('fundo-menu.jpg'); /* nome sem espaços */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #000;
+  height: 100%;
+}
+
+.menu-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.titulo {
+  color: #ffd900;
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #000;
+}
+
+.botoes button {
+  font-size: 14px;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffcc00;
+  color: #222;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.botoes button:hover {
+  transform: scale(1.05);
+  background-color: #fff200;
+}
+
+.personagens {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.personagem {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.personagem:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.personagem img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.personagem p {
+  color: #ffd900;
+  text-shadow: 1px 1px 0 #000;
+  font-size: 12px;
+}

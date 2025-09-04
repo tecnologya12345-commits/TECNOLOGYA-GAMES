@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const personagemEscolhido = localStorage.getItem('personagemEscolhido');
+
+        // Cria uma imagem para mostrar o personagem
+        const img = document.createElement('img');
+
+        if (personagemEscolhido === 'cavaleiro') {
+            img.src = 'cavaleiro.png';
+        } else if (personagemEscolhido === 'cavaleira') {
+            img.src = 'cavaleira.png';
+        } else {
+            document.body.innerHTML = '<h1 style="color: white;">Nenhum personagem escolhido.</h1>';
+        }
+
+        // Adiciona a imagem ao corpo da página
+        document.body.appendChild(img);
+    </script>
+</body>
+</html>

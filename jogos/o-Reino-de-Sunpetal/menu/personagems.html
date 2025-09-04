@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha seu Personagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="menu-container">
+        <h1 class="titulo">ESCOLHA SEU PERSONAGEM</h1>
+        <div class="personagens">
+            <div class="personagem" onclick="escolherPersonagem('cavaleiro')">
+                <img src="cavaleiro.png" alt="Cavaleiro">
+                <p>Cavaleiro</p>
+            </div>
+            <div class="personagem" onclick="escolherPersonagem('cavaleira')">
+                <img src="cavaleira.png" alt="Cavaleira">
+                <p>Cavaleira</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function escolherPersonagem(personagem) {
+    localStorage.setItem('personagemEscolhido', personagem);
+    window.location.href = 'index.html';  // Volta pro menu
+}
+
+    </script>
+</body>
+</html>

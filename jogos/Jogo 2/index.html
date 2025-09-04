@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Pixel Art</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Porta na plataforma mais alta -->
+    <div id="door-top" style="top: 110px; left: 150px;"></div>
+
+        <!-- Chão contínuo -->
+        <div class="platform" style="top: 480px; left: 0px; width: 800px;"></div>
+
+        <div id="player"></div>
+        <div id="enemy"></div>
+
+        <!-- Plataformas e Recompensas -->
+        <div class="platform" style="top: 400px; left: 50px; width: 300px;"></div>
+        <div class="reward" style="top: 360px; left: 180px;"></div>
+
+        <div class="platform" style="top: 300px; left: 400px; width: 200px;"></div>
+        <div class="reward" style="top: 260px; left: 470px;"></div>
+
+        <div class="platform" style="top: 200px; left: 150px; width: 230px;"></div>
+        <div class="reward" style="top: 160px; left: 220px;"></div>
+
+        <!-- Vidas -->
+        <div id="lives-container">
+            <span id="lives">❤️❤️❤️</span>
+        </div>
+
+        <!-- Pontuação -->
+        <div id="score-container">
+            Pontos: <span id="score">0</span>
+        </div>
+    </div>
+
+    <!-- Modal de multiplicação (fora da tela do jogo) -->
+    <div id="quiz-modal" class="hidden">
+        <div id="quiz-box">
+            <p id="quiz-question">Quanto é 2 × 3?</p>
+            <input type="number" id="quiz-answer" placeholder="Sua resposta">
+            <button id="submit-answer">Responder</button>
+            <p id="quiz-feedback"></p>
+        </div
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

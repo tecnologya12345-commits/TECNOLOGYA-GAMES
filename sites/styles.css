@@ -1,0 +1,129 @@
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            color: #fff;
+            /* NOVO PLANO DE FUNDO DE GAMES APLICADO AQUI */
+            background-image: url('https://i.imgur.com/example-game-pattern.jpg'); /* Substitua pelo link da imagem gerada */
+            background-size: 300px auto; /* Tamanho ajustado para o padrão se repetir bem */
+            background-repeat: repeat; /* Para o padrão se repetir */
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #0a0a1a; /* Cor de fallback */
+        }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            z-index: 3;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover, nav a.active {
+            color: #bd00ff;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content .subtitle {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            color: #bd00ff;
+        }
+
+        .hero-content h1 {
+            font-size: 80px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(189, 0, 255, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background-color: transparent;
+            color: #bd00ff;
+            border: 2px solid #bd00ff;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(189, 0, 255, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: #bd00ff;
+            color: #0a0a1a;
+            box-shadow: 0 0 25px rgba(189, 0, 255, 0.8);
+        }
